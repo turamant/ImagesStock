@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+<h1>Images detail</h1>
+<h2>Title: {{ image.title }}</h2>
+<ul>
+    <li><h3>{{ image.description }}</h3></li>
+    <li><img src="{{ image.image.url }}" height="100" width="100"></li>
+    <li><h3>{{ image.added_date }}</h3></li>
+    <li><h3>{{ image.cat }}</h3></li>
+    <li><h3><a href="{% url 'home' %}">Home Page</a></h3></li>
+
+</ul>
+</body>
+</html>

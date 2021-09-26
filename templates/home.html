@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+<h1>Home Page</h1>
+Категории:
+{% for cat in cats %}
+<a href="{% url 'category' cat.pk %}">{{ cat.title }}</a>
+{% endfor %}
+
+<p>Images:</p>
+{% for img in images %}
+<p><a href="{% url 'detail' img.pk %}">{{ img.title }}</a></p>
+{% endfor %}
+
+</body>
+</html>
